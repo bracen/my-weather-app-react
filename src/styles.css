@@ -1,0 +1,30 @@
+.container {
+  margin-top: 20px;
+  text-align: center;
+  background: linear-gradient(rgb(127, 140, 253), rgb(163, 234, 237));
+  border-radius: 8px;
+  align-items: center;
+  max-width: 500px;
+}
+.App {
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+}
+
+p {
+  margin-bottom: 0;
+  margin-right: 25px;
+}
+
+button {
+  background: #666666;
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
