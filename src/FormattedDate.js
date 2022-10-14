@@ -15,14 +15,17 @@ export default function FormattedDate(props) {
   if (hours < 10) {
     hours = `0${hours}`;
   }
-
   let minutes = props.date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+  let ampm = hours >= 12 ? "pm" : "am";
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+
   return (
     <div>
-      {day} {hours}:{minutes}
+      {day} {hours}:{minutes} {ampm}
     </div>
   );
 }
