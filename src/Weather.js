@@ -6,6 +6,7 @@ import axios from "axios";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     setWeatherData({
@@ -21,15 +22,30 @@ export default function Weather(props) {
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/sunny.png",
     });
   }
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+  function search() {
+    let key = `7aa24630d378d5abf1d82ac33ae578d1`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
 
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <form className="search text-center">
+        <form onSubmit={handleSubmit} className="search text-center">
           <input
             className="search-input"
             type="text"
             placeholder="serach for city"
+            onChange={handleCityChange}
           />
           <input type="submit" value="search" />
         </form>
@@ -37,10 +53,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    let key = `7aa24630d378d5abf1d82ac33ae578d1`;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${key}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return "loading..";
   }
 }
