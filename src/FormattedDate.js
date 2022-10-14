@@ -20,9 +20,7 @@ export default function FormattedDate(props) {
     minutes = `0${minutes}`;
   }
   let ampm = hours >= 12 ? "pm" : "am";
-  hours = hours % 12;
-  hours = hours ? hours : 12;
-
+ 
   return (
     <div>
       {day} {hours}:{minutes} {ampm}
