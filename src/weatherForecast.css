@@ -1,0 +1,11 @@
+.WeatherForecast{
+    color:aliceblue;
+}
+.forecast-temp{
+    margin-bottom: 20px;
+}
+.forecast-icon img{
+  height: 70px;
+  width: 70px;
+    
+}
