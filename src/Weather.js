@@ -12,6 +12,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates:response.data.coord,
       temperature: response.data.main.temp,
       minTemperature: response.data.main.temp_min,
       maxTemperature: response.data.main.temp_max,
