@@ -20,8 +20,12 @@ export default function WeatherInfo(props) {
           </div>
           <div className="col-sm">
             <span className="weahter-icon">
-              <img src={props.info.iconUrl} alt={props.info.description} />
+              <img
+                src={props.info.icon}
+                alt=""
+              />
             </span>
+
             <br />
             <ul>
               <li>
