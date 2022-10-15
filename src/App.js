@@ -6,11 +6,11 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather defaultCity="Paris"/>
+        <Weather defaultCity="Paris" />
       </div>
       <small>
         <a
-          href="https://github.com/bracen/weather-react-bracen.git"
+          href="https://github.com/bracen/my-weather-app-react"
           rel="noreferrer"
           target="_blank"
         >
