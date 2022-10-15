@@ -38,9 +38,9 @@
   top: -20px;
 }
 .weahter-icon img {
-  margin-top: 20px;
-  height: 120px;
-  width: 120px;
+  margin-top: 0px;
+  height: 100px;
+  width: 100px;
 }
 ul {
   list-style: none;
