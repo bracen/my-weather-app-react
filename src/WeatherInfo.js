@@ -50,7 +50,6 @@ export default function WeatherInfo(props) {
           </div>
         </div>
       </div>
-      <div className="forecast text-center px-5 pt-2"></div>
     </div>
   );
 }
