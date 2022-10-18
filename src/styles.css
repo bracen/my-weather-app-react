@@ -24,7 +24,14 @@ button {
   padding: 5px;
   border-radius: 5px;
 }
-
 li:first-letter {
   text-transform: capitalize;
+}
+ul {
+  list-style: none;
+  line-height: 20px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding-left: 0 !important;
 }

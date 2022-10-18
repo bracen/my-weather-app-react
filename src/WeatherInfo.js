@@ -1,14 +1,14 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
+import "./Weather.css";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <div className="container w-90 small p-4 mt-3 text-center">
-        <div className="row city">
+        <div className="row cities">
           <div className="col-sm pt-4 text-center">
-            <span className="city">{props.info.city}</span>
-            <br />
+            <div className="city">{props.info.city}</div>
             <ul>
               <li>
                 <FormattedDate date={props.info.date} />
