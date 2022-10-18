@@ -24,8 +24,10 @@
 .low-high-temp {
   font-family: Arial, Helvetica, sans-serif;
 }
-.WeatherForecastDay{
-  margin-top: 15px;
+.WeatherForecast{
+ 
+  margin : 15px 25px 0;
+ 
 }
 
 .forecast-temperature {
